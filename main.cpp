@@ -7,7 +7,7 @@ int main() {
 
     setlocale(LC_ALL, "ru_RU");
 
-    // Создаем и наполняем словарь
+    // РЎРѕР·РґР°РµРј Рё РЅР°РїРѕР»РЅСЏРµРј СЃР»РѕРІР°СЂСЊ
     Trie trie;
     trie.insert("apple");
     trie.insert("banana");
@@ -17,17 +17,17 @@ int main() {
     trie.insert("lemon");
     trie.insert("orange");
     trie.insert("pear");
-    //trie.insert("яблоко"); 
-    //trie.insert("персик"); 
-    //trie.insert("лимон");
+    //trie.insert("СЏР±Р»РѕРєРѕ"); 
+    //trie.insert("РїРµСЂСЃРёРє"); 
+    //trie.insert("Р»РёРјРѕРЅ");
 
-    // Предлагаем варианты слов по введенной части
+    // РџСЂРµРґР»Р°РіР°РµРј РІР°СЂРёР°РЅС‚С‹ СЃР»РѕРІ РїРѕ РІРІРµРґРµРЅРЅРѕР№ С‡Р°СЃС‚Рё
     std::string prefix;
     while (true) {
-        std::cout << "Введите часть слова: ";
+        std::cout << "Р’РІРµРґРёС‚Рµ С‡Р°СЃС‚СЊ СЃР»РѕРІР°: ";
         std::cin >> prefix;
         std::vector<std::string> words = trie.search(prefix);
-        std::cout << "Варианты: ";
+        std::cout << "Р’Р°СЂРёР°РЅС‚С‹: ";
         for (std::string word : words) {
             std::cout << word << " ";
         }
